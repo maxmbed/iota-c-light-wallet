@@ -2,6 +2,7 @@
 #define AUX_H
 
 #include <stdbool.h>
+#include <stdint.h>
 
 /** @brief Checks whether a given string is a valid base-27 encoding.
  *  Input is checked until num_chars or zero character is reached.

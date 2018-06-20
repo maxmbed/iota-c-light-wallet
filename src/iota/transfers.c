@@ -2,6 +2,7 @@
 
 #include <string.h>
 #include <assert.h>
+#include <time.h>
 // iota-related stuff
 #include "conversion.h"
 #include "addresses.h"
@@ -116,7 +117,7 @@ void prepare_transfers(char *seed, uint8_t security, TX_OUTPUT *outputs,
                        char transaction_chars[][2673])
 {
     // TODO use a proper timestamp
-    const uint32_t timestamp = 0;
+    const uint32_t timestamp = (uint32_t)time(NULL);
     const unsigned int num_txs = num_outputs + num_inputs * security;
     const unsigned int last_tx_index = num_txs - 1;
 
