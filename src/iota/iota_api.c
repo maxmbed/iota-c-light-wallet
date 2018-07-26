@@ -51,7 +51,7 @@ int8_t iotaApi_getTransactionsToApprove(uint8_t* trunkTx, uint8_t* branchTx)
 	uint8_t resp[255];
 	char* ptr;
 
-	request(NODE_URL, NODE_PORT, "{\"command\": \"getTransactionsToApprove\", \"depth\": 27}", resp);
+	request(NODE_URL, NODE_PORT, "{\"command\": \"getTransactionsToApprove\", \"depth\": 15}", resp);
 
 	ptr = strstr(resp,"trunkTransaction\":");
 	if(ptr == NULL)
